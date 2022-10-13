@@ -6,7 +6,7 @@ variable "region" {
 variable "bucket_name" {
   type = string
   description = "name of your state file bucket"
-  default = "eks-state-files"
+  default = "eks-state-files1"
 }
 
 variable "environment" {
