@@ -2,7 +2,7 @@
 action=$1
 workspace=$2
 region=$3
-s3_bucket='eks-state-files'
+s3_bucket='eks-state-files1'
 
 console_error(){
 	echo "Error: ${1}";
