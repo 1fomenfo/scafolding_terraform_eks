@@ -15,6 +15,18 @@ Simple Terraform scaffold for the base of your projects.
 
 Un-opinionated lightweight scaffolding of a basic terraform repo. Deliberately lightweight (& for the time being un-finished).
 
+< name="role"></a>
+### Minimum IAM policy
+
+This document describes the minimum IAM policy required to run [core examples](https://github.com/aws-ia/terraform-aws-eks-blueprints/blob/main/.github/workflows/e2e-parallel-full.yml#L30-L47) that we run in our [E2E workflow](https://github.com/aws-ia/terraform-aws-eks-blueprints/blob/main/.github/workflows/e2e-parallel-full.yml) , mainly focused on the list of IAM actions.
+
+> **Note**: The policy resource is set as `*` to allow all resources, this is not a recommended practice.
+
+~~~yaml
+{% include "min-iam-policy.json" %}
+~~~
+
+
 
 <a name="usage"></a>
 ### Usage
@@ -46,13 +58,13 @@ dev plan >
 ```
 
 cd bin/
-./tfscaffold.sh plan dev eu-west-1
+./tfscaffold.sh plan dev us-east-1
 ```
 
 prod plan >
 ```
 cd bin/
-./tfscaffold.sh plan prod eu-west-1
+./tfscaffold.sh plan prod us-east-1
 ```
 
 <a name="structure"></a>

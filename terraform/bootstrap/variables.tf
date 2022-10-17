@@ -1,18 +1,15 @@
-variable "region" {
+variable "aws_region" {
   type = string
   description = "region of deployment"
 }
-
 variable "bucket_name" {
   type = string
   description = "name of your state file bucket"
-  default = "eks-state-files1"
 }
 
 variable "environment" {
   type = string
   description = "environment name"
-  default = "dev"
 }
 
 variable "project" {
